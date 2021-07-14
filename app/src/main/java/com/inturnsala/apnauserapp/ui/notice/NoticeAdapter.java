@@ -2,6 +2,7 @@ package com.inturnsala.apnauserapp.ui.notice;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.inturnsala.apnauserapp.FullimageView;
 import com.inturnsala.apnauserapp.R;
 
 import java.util.ArrayList;
@@ -54,6 +56,16 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
         } catch (Exception e) {
             e.printStackTrace();
         }
+        holder.deleteNoticeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(context, FullimageView.class);
+                intent.putExtra("image",currentItem.getImage());
+                context.startActivity(intent);
+
+            }
+        });
 
 
     }

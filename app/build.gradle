@@ -52,4 +52,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
 
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
 }

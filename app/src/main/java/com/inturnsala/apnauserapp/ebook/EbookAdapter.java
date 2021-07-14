@@ -47,7 +47,9 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(context,list.get(position).getPdfTitle(),Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context,PdfViewerActivity.class);
+                    intent.putExtra("pdfUri",list.get(position).getPdfUri());
+                    context.startActivity(intent);
 
             }
         });
