@@ -8,12 +8,14 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.inturnsala.apnauserapp.ebook.EbookActivity;
 
 import java.util.Objects;
 
@@ -69,7 +71,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.navigation_ebook:
-                Toast.makeText(this,"navigation_Ebook",Toast.LENGTH_SHORT).show();
+
+                //Toast.makeText(this,"navigation_Ebook",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, EbookActivity.class));
                 break;
 
             case R.id.navigation_theme:
